@@ -1,0 +1,62 @@
+Stack-Based Array Initialization and Printing
+Objective:
+This lab is designed to help students understand array operations using the stack in RISC-V
+assembly language, with a focus on utilizing shift operations ( SLL ). Students will learn how to
+allocate space for arrays on the stack, initialize array elements using loops and shift operations,
+modify specific array elements, print array values, and deallocate the stack space efficiently.
+General Instructions:
+Identification: Use only your designated UNC Charlotte identification number.
+Testing: Verify that your code runs without errors in the RARS simulator.
+Compilation: Your code must assemble and run in RARS with zero errors for credit.
+Errors and Warnings: Aim for no errors or warnings for full credit.
+Assistance: Seek guidance from the course instructor, TA/IA, or the CCI Tutoring center
+as needed.
+Lab Task: Stack-Based Array Initialization and Printing Using Shift Operations (100
+points)
+Program Requirements:
+1. Initializing and Modifying an Array Using Shift Operations:
+File Setup:
+Create a RISC-V assembly file named stack_array_print.s .
+Array Allocation:
+Allocate space on the stack for an integer array of 5 elements.
+Array Initialization:
+Initialize the array elements using a loop, where each element is assigned a
+value equal to its index shifted left by 1 bit (i.e., array[i] = i << 1 ). This
+operation effectively multiplies the index by 2 without using the multiplication
+instruction.
+Array Modification:
+Modify the third element of the array to be double the value of the first element
+using shift operations (i.e., array[2] = array[0] << 1 ).
+Stack Deallocation:
+Deallocate the stack space at the end of your program to maintain stack
+integrity.
+2. Printing Array Elements:
+Print Loop:
+In the same file, add code to traverse the initialized array using a loop.
+In each iteration of the loop, load the current array element and print its value
+using a system call.
+After printing each number, print a newline character to move to the next line.
+Do not use any string literals; use the newline character's ASCII value
+directly.
+Stack Deallocation:
+Ensure all allocated stack space is deallocated before program completion.
+C Code Reference:
+For your reference, here is the equivalent C code that your RISC-V assembly program should
+implement, adapted to use shift operations instead of multiplication and to print each array
+element followed by a newline character:
+#include <stdio.h>
+int main() {
+int array[5];
+int i;
+// Initialize the array using shift operations
+for (i = 0; i < 5; i++) {
+array[i] = i << 1; // Equivalent to i * 2
+}
+// Modify the third element to be double the first element
+array[2] = array[0] << 1; // Equivalent to array[2] = array[0] * 2
+// Print array elements, each followed by a newline
+for (i = 0; i < 5; i++) {
+printf("%d\n", array[i]);
+}
+return 0;
+}

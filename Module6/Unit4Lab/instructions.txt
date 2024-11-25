@@ -1,0 +1,58 @@
+General Instructions:
+Identification: Use only your designated UNC Charlotte identification number.
+Testing: Verify that your code runs without errors in the RARS simulator.
+Compilation: Your code must assemble and run in RARS with zero errors for credit.
+Errors and Warnings: Aim for no errors or warnings for full credit.
+Assistance: Seek guidance from the course instructor, TA/IA, or the CCI Tutoring center
+as needed.
+Lab Task: Global Array Manipulation (100 points)
+Program Requirements:
+1. Declaring and Initializing a Global Array:
+File Setup:
+Create a RISC-V assembly file named global_array_operations.s .
+Global Array Declaration:
+Declare a global integer array named globalArray with 4 elements.
+Initialize the array with values of your choice.
+Modifying an Array Element:
+Write assembly code to modify the second element of globalArray to be
+four times the value of the first element (i.e. multiply it by four).
+2. Populating a Global Array Using a Loop:
+Second Global Array Declaration:
+Declare another global integer array named loopArray with 5 elements.
+Do not initialize this array.
+Loop Implementation:
+Write a loop that populates loopArray with values based on their indices;
+assign each element loopArray[i] = i * 4 + 2 .
+Implementation Details:
+Use a loop counter to iterate through the array indices.
+Calculate the value for each element using addition and shift operations
+( SLL ) if necessary.
+Store the calculated value in the corresponding array element.
+Printing Array Elements:
+After populating loopArray , traverse the array using a loop and print each
+element's value.
+After printing each number, print a newline character to move to the next line.
+System Calls:
+Use the appropriate RARS system calls to print integers and newline
+characters.
+Do not use any string literals; use the newline character's ASCII value
+directly.
+C Code Reference:
+For your reference, here is the equivalent C code that your RISC-V assembly program should
+implement:
+#include <stdio.h>
+int globalArray[4] = {3, 6, 9, 12};
+int loopArray[5];
+int main() {
+// Modify the second element to be triple the first element
+globalArray[1] = globalArray[0] * 3;
+// Populate loopArray using a loop
+for (int i = 0; i < 5; i++) {
+loopArray[i] = i * 4 + 2;
+}
+// Print loopArray elements, each followed by a newline
+for (int i = 0; i < 5; i++) {
+printf("%d\n", loopArray[i]);
+}
+return 0;
+}

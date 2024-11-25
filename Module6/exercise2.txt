@@ -1,0 +1,16 @@
+# Initialize s0 and s1 with values for A and B
+li s0, 7       # Initialize A with 7
+li s1, 10      # Initialize B with 10
+
+# Use branch instructions to check if A < B
+bge s0, s1, greater_equal    # Branch if A >= B
+
+# Double A or subtract 3 from B based on condition
+add s0, s0, s0              # Double A by adding it to itself
+j end
+
+greater_equal:
+    addi s1, s1, -3         # Subtract 3 from B
+
+end:
+    # Program ends here

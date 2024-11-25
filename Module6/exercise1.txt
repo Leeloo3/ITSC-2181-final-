@@ -1,0 +1,18 @@
+# Initialize t0 and t1 with values
+li t0, 7       # Load immediate value 5 into t0
+li t1, 10       # Load immediate value 5 into t1
+
+# Compare t0 and t1
+beq t0, t1, equal     # Branch if t0 equals t1
+bne t0, t1, not_equal # Branch if t0 not equals t1
+
+#Apply conditional logic and store result in t2 or t3
+equal:
+    addi t2, t0, 4    # Add 4 to t0 and store in t2
+    j end             # Jump to end (over not_equal)
+
+not_equal:
+    addi t3, t1, -4   # Subtract 4 from t1 and store in t3
+
+end:
+    # Program ends here

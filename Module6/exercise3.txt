@@ -1,0 +1,27 @@
+# Initialize a0, a1, a2 with values
+li a0, 8       # First value
+li a1, 5       # Second value
+li a2, 15      # Third value
+
+# Compare a0 and a1
+ble a0, a1, less_equal      # Branch if a0 <= a1
+
+# Nested condition: if a0 > a1, check if a2 > 10
+# a0 > a1 case
+li t0, 10                   # Load immediate value 10 for comparison
+ble a2, t0, less_than_10    # Branch if a2 <= 10
+
+# a2 > 10 case
+addi a0, a0, 5             # Add 5 to a0
+j end
+
+# Apply addition or subtraction to a0, or modify a1 based on condition
+less_than_10:
+    addi a0, a0, -5        # Subtract 5 from a0
+    j end
+
+less_equal:
+    addi a1, a1, -2        # Subtract 2 from a1
+
+end:
+    # Program ends here

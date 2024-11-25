@@ -1,0 +1,30 @@
+Stack-Based Array Operations in RISC-V Assembly
+Objective: This lab is designed to help students understand array operations using the stack in
+RISC-V assembly language. Students will learn how to allocate space for arrays on the stack,
+perform operations on array elements, and deallocate the stack space.
+General Instructions:
+Identification: Use only your designated UNC Charlotte identification number.
+Testing: Verify that your code runs without errors in the RARS simulator.
+Compilation: Your code must assemble and run in RARS with zero errors for credit.
+Errors and Warnings: Aim for no errors or warnings for full credit.
+Assistance: Seek guidance from the course instructor, TA/IA, or the CCI Tutoring center
+as needed.
+Lab Task: Stack-Based Array Manipulation (100 points)
+Program Requirements:
+1. Creating and Manipulating an Array:
+Create a RISC-V assembly file named stack_array_operations.s .
+In this file, write a RISC-V assembly program that allocates space for an integer
+array of 4 elements on the stack.
+Initialize the array with values of your choice.
+Write assembly code to modify the second element of the array to be double the
+value of the first element.
+Deallocate the stack space at the end of your program.
+2. Summing Array Elements:
+In the same file, add code to calculate the sum of all elements in another integer
+array with 3 elements, using a loop.
+The array should be initialized with values [5, 10, 15].
+Use the stack to store the array and sum variable.
+Deallocate the stack space before program completion.
+Submission Instructions:
+Submit the stack_array_operations.s file on Canvas before the deadline.
+Ensure your code is well-commented and adheres to the lab requirements.
