@@ -1,0 +1,31 @@
+Do any of the following program statements cause a problem? If so, indicate or explain the type of problem.
+
+Part 1
+Assuming the following information:
+
+int a, b, *ap, *bp; 
+char c, d, *cp, *dp; 
+float f, g, *fp, *gp;
+1. ap = &c;
+
+2. *ap = 3333;
+
+3. c = ap;
+
+4. c = *ap;
+
+Part 2
+Assuming the following information:
+
+int a, b, *ap, *bp; 
+char c, d, *cp, *dp; 
+float f, g, *fp, *gp;
+1. dp = ap;
+
+2. dp = 'Q';
+
+3. fp = 3.14159;
+
+4. gp = &fp;
+
+5. *gp = 3.14159;
