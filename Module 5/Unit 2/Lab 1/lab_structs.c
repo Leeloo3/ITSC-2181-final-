@@ -24,6 +24,7 @@ void print_student(const struct Student *s) {
     printf("Name: %s\n", s->name);
     printf("ID: %d\n", s->id);
     printf("Average Grade: %.1f\n", calculate_average(s));
+    printf("\n");
 }
 
 int main() {
@@ -42,6 +43,7 @@ int main() {
         int id;
         float g1, g2, g3;
 
+        printf("\n");
         printf("Enter information for student %d:\n", i + 1);
         printf("Name: ");
         scanf("%s", name);
