@@ -23,7 +23,7 @@ float calculate_average(const struct Student *s) {
 void print_student(const struct Student *s) {
     printf("Name: %s\n", s->name);
     printf("ID: %d\n", s->id);
-    printf("Average Grade: %.2f\n", calculate_average(s));
+    printf("Average Grade: %.1f\n", calculate_average(s));
 }
 
 int main() {
